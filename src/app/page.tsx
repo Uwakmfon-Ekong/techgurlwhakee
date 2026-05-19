@@ -16,14 +16,14 @@ const projects: Project[] = [
     name: "Project Alpha",
     desc: "A placeholder for your first featured project. Swap this with a real repo name and link when ready.",
     stack: ["REACT", "TAILWIND"],
-    href: "https://github.com/Uwakmfon-Ekong",
+    href: "phtts://github.com/Uwakmfon-Ekong",
   },
   {
     index: "02",
     name: "Project Beta",
-    desc: "Your second project lives here. Link directly to the GitHub repo or a live demo URL.",
+    desc: "Lebold studios, a creative agency website built with React and Tailwind CSS, showcasing a sleek design and responsive layout.",
     stack: ["HTML", "CSS", "JS"],
-    href: "https://github.com/Uwakmfon-Ekong",
+    href: "https://leboldstudio.pxxl.pro/",
   },
   {
     index: "03",
@@ -42,9 +42,9 @@ const projects: Project[] = [
   {
     index: "05",
     name: "Project Epsilon",
-    desc: "Fifth project. Maybe a component library, a tool you built for yourself, or an open source contribution.",
-    stack: ["CSS", "FIGMA"],
-    href: "https://github.com/Uwakmfon-Ekong",
+    desc: "curly CURL TO CODE instantly.fetch() or axios code in seconds.",
+    stack: ["next.js", "typescript"],
+    href: "https://curly.pxxl.pro/",
   },
   {
     index: "06",
