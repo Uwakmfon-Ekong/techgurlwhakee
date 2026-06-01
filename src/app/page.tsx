@@ -58,7 +58,7 @@ const projects: Project[] = [
   {
     index: "06",
     name: "Project Foorm",
-    desc: "An all-in-one form, email, and link platform. built as sole engineer.",
+    desc: "An all-in-one form, email, and link platform. currently applying for yc.",
     stack: ["NEXT.JS", "TYPESCRIPT"],
     href: "https://foorm.xyz",
     screenshot: SCREENSHOT("https://foorm.xyz"),
@@ -478,7 +478,7 @@ export default function Portfolio() {
             <SectionLabel>// about</SectionLabel>
             <p style={{ fontSize: 13, color: "#888888", lineHeight: 1.8, maxWidth: 600, marginBottom: "0.8rem" }}>
               Frontend developer based in{" "}
-              <span style={{ color: "#ffffff" }}>Uyo, Nigeria</span>. I build websites for businesses and brands — clean interfaces, functional components, and digital experiences that speak. Currently studying Communication Arts and working at the intersection of{" "}
+              <span style={{ color: "#ffffff" }}>Nigeria</span>. I build websites for businesses and brands — clean interfaces, functional components, and digital experiences that speak. Currently studying Communication Arts and working at the intersection of{" "}
               <span style={{ color: "#ffffff" }}>tech, content, marketing and ugc</span>.
             </p>
             <p style={{ fontSize: 13, color: "#888888", marginBottom: "1.5rem" }}>
@@ -544,7 +544,7 @@ export default function Portfolio() {
               <StatusDot />
               <span style={{ color: "#888888" }}>available for work</span>
               &nbsp;&mdash;&nbsp;
-              <span style={{ color: "#888888" }}>uyo, nigeria</span>
+              <span style={{ color: "#888888" }}>globally</span>
             </div>
             <div style={{ fontSize: 10, color: "#444444", letterSpacing: "0.1em" }}>
               © 2025 WHAKEE
