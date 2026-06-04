@@ -25,11 +25,11 @@ const projects: Project[] = [
   },
   {
     index: "02",
-    name: "Project Lebold",
-    desc: "Lebold studios, a creative agency website built with React and Tailwind CSS, showcasing a sleek design and responsive layout.",
+    name: "Project Xfolio",
+    desc: "Xfolio, a platform to automatically turn your X videos into a portfolio you actually own.",
     stack: ["NEXT", "TAILWIND", "TS"],
-    href: "https://leboldstudio.pxxl.pro/",
-    screenshot: SCREENSHOT("https://leboldstudio.pxxl.pro/"),
+    href: "https://xfolio.pxxl.pro/",
+    screenshot: SCREENSHOT("https://xfolio.pxxl.pro/"),
   },
   {
     index: "03",
@@ -77,18 +77,6 @@ const CONTENT_URL = "https://app.notion.com/p/mini-portfolio-35155ceabf3480f4a03
 const mono = "'Share Tech Mono', monospace";
 const sans = "'Syne', sans-serif";
 
-const GitHubIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" />
-  </svg>
-);
-
-const XIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
-
 const DownloadIcon = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -115,41 +103,6 @@ const NotionIcon = () => (
     <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
   </svg>
 );
-
-interface LinkPillProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-function LinkPill({ href, children }: LinkPillProps) {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-        padding: "7px 14px",
-        border: `1px solid ${hovered ? "#ffffff" : "#ffffff44"}`,
-        background: hovered ? "#ffffff15" : "transparent",
-        color: "#ffffff",
-        textDecoration: "none",
-        fontSize: 12,
-        letterSpacing: "0.08em",
-        transition: "background 0.2s, border-color 0.2s",
-        fontFamily: mono,
-        cursor: "pointer",
-      }}
-    >
-      {children}
-    </a>
-  );
-}
 
 interface ActionButtonProps {
   href: string;
@@ -435,8 +388,6 @@ export default function Portfolio() {
         }
         @media (max-width: 640px) {
           .matrix { grid-template-columns: repeat(2, 1fr) !important; }
-          .portfolio-header { grid-template-columns: 1fr !important; }
-          .header-links { align-items: flex-start !important; flex-direction: row !important; flex-wrap: wrap !important; }
           .cta-row { flex-direction: column !important; align-items: flex-start !important; }
         }
         @media (max-width: 420px) {
@@ -450,27 +401,16 @@ export default function Portfolio() {
         <div style={{ position: "relative", zIndex: 2, maxWidth: 960, margin: "0 auto", padding: "3rem 2rem 4rem" }}>
 
           {/* HEADER */}
-          <header className="portfolio-header" style={{ display: "grid", gridTemplateColumns: "1fr auto", alignItems: "start", gap: "2rem", marginBottom: "3.5rem", paddingBottom: "2rem", borderBottom: "1px solid #2a2a2a" }}>
-            <div>
-              <p style={{ fontSize: 11, color: "#444444", marginBottom: "0.5rem", letterSpacing: "0.08em" }}>
-                // portfolio.init()
-              </p>
-              <h1 style={{ fontFamily: sans, fontSize: "clamp(2.4rem, 6vw, 4rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1, letterSpacing: "-0.02em" }}>
-                Whakee
-              </h1>
-              <p style={{ marginTop: "0.6rem", fontSize: 12, color: "#888888", letterSpacing: "0.12em" }}>
-                Uwakmfon Ekong &mdash;{" "}
-                <span style={{ color: "#ffffff" }}>frontend developer</span>
-              </p>
-            </div>
-            <div className="header-links" style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end", paddingTop: "0.5rem" }}>
-              <LinkPill href="https://github.com/Uwakmfon-Ekong">
-                <GitHubIcon /> GitHub
-              </LinkPill>
-              <LinkPill href="https://x.com/whakee_">
-                <XIcon /> @whakee_
-              </LinkPill>
-            </div>
+          <header style={{ marginBottom: "3.5rem", paddingBottom: "2rem", borderBottom: "1px solid #2a2a2a" }}>
+            <p style={{ fontSize: 11, color: "#444444", marginBottom: "0.75rem", letterSpacing: "0.08em" }}>
+              // portfolio.init()
+            </p>
+            <p style={{ fontSize: 13, color: "#888888", letterSpacing: "0.1em", lineHeight: 1.6 }}>
+              Uwakmfon Ekong &mdash;{" "}
+              <span style={{ color: "#ffffff" }}>frontend developer</span>
+              {" "}&mdash;{" "}
+              <span style={{ color: "#555555" }}>Nigeria</span>
+            </p>
           </header>
 
           {/* ABOUT */}
@@ -518,7 +458,7 @@ export default function Portfolio() {
           </section>
 
           {/* PROJECTS */}
-          <section style={{ marginBottom: "3rem" }}>
+          <section id="projects" style={{ marginBottom: "3rem" }}>
             <SectionLabel>// projects</SectionLabel>
             <div className="matrix" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, background: "#2a2a2a", border: "1px solid #2a2a2a", marginBottom: "1rem" }}>
               {projects.map((p) => (
