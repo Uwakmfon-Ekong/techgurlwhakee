@@ -17,19 +17,19 @@ const SCREENSHOT = (url: string) =>
 const projects: Project[] = [
   {
     index: "01",
-    name: "Project Koral",
-    desc: "A bounty platform built on the sui blockchain.",
-    stack: ["REACT", "TAILWIND"],
-    href: "https://korall.pxxl.pro/",
-    screenshot: SCREENSHOT("https://korall.pxxl.pro/"),
+    name: "Next Gen Summit",
+    desc: "A web3 event bringing together founders, builders, and creators. organized and led by Whakee.",
+    stack: ["NEXT.JS", "TAILWIND", "WEB3"],
+    href: "https://nextgensummit.xyz",
+    screenshot: SCREENSHOT("https://nextgensummit.xyz"),
   },
   {
     index: "02",
-    name: "Project Xfolio",
-    desc: "Xfolio, a platform to automatically turn your X videos into a portfolio you actually own.",
+    name: "Project Susliva",
+    desc: "Susliva, a platform built for sustainable living and conscious consumption.",
     stack: ["NEXT", "TAILWIND", "TS"],
-    href: "https://xfolio.pxxl.pro/",
-    screenshot: SCREENSHOT("https://xfolio.pxxl.pro/"),
+    href: "https://susliva.org/",
+    screenshot: SCREENSHOT("https://susliva.org/"),
   },
   {
     index: "03",
@@ -66,19 +66,38 @@ const projects: Project[] = [
 ];
 
 const skills: string[] = [
-  "HTML", "CSS", "JavaScript", "React", "Tailwind",
-  "Git", "GitHub", "Figma", "Web3", "REST APIs", "Responsive Design",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Tailwind",
+  "Git",
+  "GitHub",
+  "Figma",
+  "Web3",
+  "REST APIs",
+  "Responsive Design",
 ];
 
 const CV_URL = "/whakee-cv.pdf";
 const TG_URL = "https://t.me/whakeee";
-const CONTENT_URL = "https://app.notion.com/p/mini-portfolio-35155ceabf3480f4a03de7c4340bb991?showMoveTo=true&saveParent=true";
+const CONTENT_URL =
+  "https://app.notion.com/p/mini-portfolio-35155ceabf3480f4a03de7c4340bb991?showMoveTo=true&saveParent=true";
 
 const mono = "'Share Tech Mono', monospace";
 const sans = "'Syne', sans-serif";
 
 const DownloadIcon = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="13"
+    height="13"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
     <polyline points="7 10 12 15 17 10" />
     <line x1="12" y1="15" x2="12" y2="3" />
@@ -86,7 +105,16 @@ const DownloadIcon = () => (
 );
 
 const ArrowRightIcon = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="13"
+    height="13"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <line x1="5" y1="12" x2="19" y2="12" />
     <polyline points="12 5 19 12 12 19" />
   </svg>
@@ -111,7 +139,12 @@ interface ActionButtonProps {
   filled?: boolean;
 }
 
-function ActionButton({ href, download, children, filled = false }: ActionButtonProps) {
+function ActionButton({
+  href,
+  download,
+  children,
+  filled = false,
+}: ActionButtonProps) {
   const [hovered, setHovered] = useState(false);
   return (
     <a
@@ -133,7 +166,13 @@ function ActionButton({ href, download, children, filled = false }: ActionButton
         cursor: "pointer",
         textDecoration: "none",
         transition: "background 0.2s, border-color 0.2s, color 0.2s",
-        background: filled ? (hovered ? "#dddddd" : "#ffffff") : hovered ? "#ffffff15" : "transparent",
+        background: filled
+          ? hovered
+            ? "#dddddd"
+            : "#ffffff"
+          : hovered
+            ? "#ffffff15"
+            : "transparent",
         color: filled ? "#111111" : "#ffffff",
       }}
     >
@@ -224,10 +263,20 @@ function ProjectCard({ project }: ProjectCardProps) {
       <span style={{ fontSize: 10, color: "#444444", letterSpacing: "0.1em" }}>
         {project.index}
       </span>
-      <span style={{ fontFamily: sans, fontSize: 15, fontWeight: 700, color: "#eeeeee", lineHeight: 1.2 }}>
+      <span
+        style={{
+          fontFamily: sans,
+          fontSize: 15,
+          fontWeight: 700,
+          color: "#eeeeee",
+          lineHeight: 1.2,
+        }}
+      >
         {project.name}
       </span>
-      <span style={{ fontSize: 11, color: "#888888", lineHeight: 1.6, flex: 1 }}>
+      <span
+        style={{ fontSize: 11, color: "#888888", lineHeight: 1.6, flex: 1 }}
+      >
         {project.desc}
       </span>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -329,7 +378,8 @@ function ContentCard() {
       <div
         style={{
           position: "absolute",
-          top: 0, left: 0,
+          top: 0,
+          left: 0,
           width: 2,
           height: hovered ? "100%" : 0,
           background: "#ffffff",
@@ -337,10 +387,19 @@ function ContentCard() {
         }}
       />
       <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-        <span style={{ fontSize: 10, color: "#444444", letterSpacing: "0.1em" }}>
+        <span
+          style={{ fontSize: 10, color: "#444444", letterSpacing: "0.1em" }}
+        >
           // content
         </span>
-        <span style={{ fontFamily: sans, fontSize: 15, fontWeight: 700, color: "#eeeeee" }}>
+        <span
+          style={{
+            fontFamily: sans,
+            fontSize: 15,
+            fontWeight: 700,
+            color: "#eeeeee",
+          }}
+        >
           mini content portfolio
         </span>
         <span style={{ fontSize: 11, color: "#888888" }}>
@@ -395,46 +454,114 @@ export default function Portfolio() {
         }
       `}</style>
 
-      <div style={{ background: "#111111", color: "#eeeeee", fontFamily: mono, minHeight: "100vh", position: "relative" }}>
+      <div
+        style={{
+          background: "#111111",
+          color: "#eeeeee",
+          fontFamily: mono,
+          minHeight: "100vh",
+          position: "relative",
+        }}
+      >
         <div style={gridBg} />
 
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 960, margin: "0 auto", padding: "3rem 2rem 4rem" }}>
-
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            maxWidth: 960,
+            margin: "0 auto",
+            padding: "3rem 2rem 4rem",
+          }}
+        >
           {/* HEADER */}
-          <header style={{ marginBottom: "3.5rem", paddingBottom: "2rem", borderBottom: "1px solid #2a2a2a" }}>
-            <p style={{ fontSize: 11, color: "#444444", marginBottom: "0.75rem", letterSpacing: "0.08em" }}>
+          <header
+            style={{
+              marginBottom: "3.5rem",
+              paddingBottom: "2rem",
+              borderBottom: "1px solid #2a2a2a",
+            }}
+          >
+            <p
+              style={{
+                fontSize: 11,
+                color: "#444444",
+                marginBottom: "0.75rem",
+                letterSpacing: "0.08em",
+              }}
+            >
               // portfolio.init()
             </p>
-            <p style={{ fontSize: 13, color: "#888888", letterSpacing: "0.1em", lineHeight: 1.6 }}>
+            <p
+              style={{
+                fontSize: 13,
+                color: "#888888",
+                letterSpacing: "0.1em",
+                lineHeight: 1.6,
+              }}
+            >
               Uwakmfon Ekong &mdash;{" "}
-              <span style={{ color: "#ffffff" }}>frontend developer</span>
-              {" "}&mdash;{" "}
-              <span style={{ color: "#555555" }}>Nigeria</span>
+              <span style={{ color: "#ffffff" }}>frontend developer</span>{" "}
+              &mdash; <span style={{ color: "#555555" }}>Nigeria</span>
             </p>
           </header>
 
           {/* ABOUT */}
           <section style={{ marginBottom: "3rem" }}>
             <SectionLabel>// about</SectionLabel>
-            <p style={{ fontSize: 13, color: "#888888", lineHeight: 1.8, maxWidth: 600, marginBottom: "0.8rem" }}>
+            <p
+              style={{
+                fontSize: 13,
+                color: "#888888",
+                lineHeight: 1.8,
+                maxWidth: 600,
+                marginBottom: "0.8rem",
+              }}
+            >
               Frontend developer based in{" "}
-              <span style={{ color: "#ffffff" }}>Nigeria</span>. I build websites for businesses and brands — clean interfaces, functional components, and digital experiences that speak. Currently studying Communication Arts and working at the intersection of{" "}
-              <span style={{ color: "#ffffff" }}>tech, content, marketing and ugc</span>.
+              <span style={{ color: "#ffffff" }}>Nigeria</span>. I build
+              websites for businesses and brands — clean interfaces, functional
+              components, and digital experiences that speak. Currently studying
+              Communication Arts and working at the intersection of{" "}
+              <span style={{ color: "#ffffff" }}>
+                tech, content, marketing and ugc
+              </span>
+              .
             </p>
-            <p style={{ fontSize: 13, color: "#888888", marginBottom: "1.5rem" }}>
+            <p
+              style={{ fontSize: 13, color: "#888888", marginBottom: "1.5rem" }}
+            >
               need a website?{" "}
               <a
                 href={TG_URL}
                 target="_blank"
                 rel="noreferrer"
-                style={{ color: "#ffffff", textDecoration: "none", borderBottom: "1px solid #ffffff44", paddingBottom: 1, transition: "border-color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget.style.borderColor = "#ffffff")}
-                onMouseLeave={e => (e.currentTarget.style.borderColor = "#ffffff44")}
+                style={{
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  borderBottom: "1px solid #ffffff44",
+                  paddingBottom: 1,
+                  transition: "border-color 0.2s",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.borderColor = "#ffffff")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.borderColor = "#ffffff44")
+                }
               >
                 grab your website here ↗
               </a>
             </p>
-            <div className="cta-row" style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+            <div
+              className="cta-row"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                flexWrap: "wrap",
+              }}
+            >
               <ActionButton href={CV_URL} download="Whakee_cv.pdf" filled>
                 <DownloadIcon /> download cv
               </ActionButton>
@@ -460,7 +587,17 @@ export default function Portfolio() {
           {/* PROJECTS */}
           <section id="projects" style={{ marginBottom: "3rem" }}>
             <SectionLabel>// projects</SectionLabel>
-            <div className="matrix" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, background: "#2a2a2a", border: "1px solid #2a2a2a", marginBottom: "1rem" }}>
+            <div
+              className="matrix"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: 1,
+                background: "#2a2a2a",
+                border: "1px solid #2a2a2a",
+                marginBottom: "1rem",
+              }}
+            >
               {projects.map((p) => (
                 <ProjectCard key={p.index} project={p} />
               ))}
@@ -479,18 +616,29 @@ export default function Portfolio() {
           </section>
 
           {/* FOOTER */}
-          <footer style={{ borderTop: "1px solid #2a2a2a", paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
+          <footer
+            style={{
+              borderTop: "1px solid #2a2a2a",
+              paddingTop: "1.5rem",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "1rem",
+            }}
+          >
             <div style={{ fontSize: 11, color: "#444444" }}>
               <StatusDot />
               <span style={{ color: "#888888" }}>available for work</span>
               &nbsp;&mdash;&nbsp;
               <span style={{ color: "#888888" }}>globally</span>
             </div>
-            <div style={{ fontSize: 10, color: "#444444", letterSpacing: "0.1em" }}>
+            <div
+              style={{ fontSize: 10, color: "#444444", letterSpacing: "0.1em" }}
+            >
               © 2025 WHAKEE
             </div>
           </footer>
-
         </div>
       </div>
     </>

@@ -9,14 +9,100 @@ export interface Post {
 }
 
 export const posts: Post[] = [
+   {
+    slug: "nobody-prepares-you-for-the-broke-season",
+    title: "nobody prepares you for the broke season of being a creator.",
+    subtitle:
+      "On brand deals, trust, and the pressure of saying no when you really need the money.",
+    date: "2025-07-21",
+    tag: "creators",
+    readTime: "5 min",
+    content: `
+most creators talk about growth hacks, content calendars. hitting your next follower goal, how to post consistently and how to grow from 1k to 10k.
+
+nobody really talks about the broke season. staring at a brand deal that pays more than you've made all month, and something about it just doesn't feel right.
+
+that's a different kind of pressure. it's not just "i need money." it's "i need money, and it's right here, and all i have to do is say yes."
+
+i've felt that pull more than once. and honestly, it's hard to explain to someone who hasn't been there.
+
+but here's what happens.
+
+your audience didn't follow you to be sold to. they followed you because something you said made sense to them, helped them and also felt honest. that's not nothing. that's trust. and trust is really the only thing you have.
+
+so when a gig comes up that could hurt the people watching you whether it's a product you don't trust, a platform that feels off or something that could actually cost someone their money; you have to ask yourself a harder question than "do i need this cash right now."
+
+you have to ask: am i okay using someone else's trust to fix my own problem?
+
+most times, the answer is no. even when you really need the money.
+
+and i'm not saying i've figured this all out because i haven't.
+
+saying no doesn't pay for stuffs. it doesn't clear debts. it doesn't feel like winning. it just feels like less money, and the same problems still waiting for me the next day.
+
+but i'd rather grow slowly with brands people can actually trust, than grow fast with anyone who's willing to pay and this is not because money doesn't matter but because the people who follow me now are the whole reason any real opportunity will come my way later.
+
+if i lose their trust for a quick gig, there's nothing left to build on after that.
+
+so if you're a creator right now, looking at your account balance, staring at a DM you're not sure about .......
+
+i get it. saying no is expensive.
+
+but losing your audience's trust? that costs more.
+
+i'd rather stay broke a little longer than have to explain to my audience why i let them down.
+    `.trim(),
+  },
   {
-  slug: "web3-isnt-global-yet-pollinet",
-  title: "web3 isn't global yet",
-  subtitle: "Pollinet is building the infrastructure blockchain forgot: connectivity.",
-  date: "2025-05-30",
-  tag: "web3",
-  readTime: "8 min",
-  content: `
+    slug: "dealing-with-burnout-and-lack-of-motivation",
+    title: "dealing with burnout and lack of motivation",
+    subtitle: "On the quiet kind of empty that nobody talks about.",
+    date: "2025-07-22",
+    tag: "creators",
+    readTime: "6 min",
+    content: `
+we don't talk enough about the burnout that comes with just trying to keep up.
+
+everyone talks about consistency. discipline over motivation. show up even when you don't feel like it. treat it like a job. but nobody really talks about the weeks where you're doing everything right and still feel completely empty inside.
+
+i've seen it a lot on my tl lately. not just from creators but from developers, from people who just hit a goal they worked years for and it's like a quiet wave going around right now, and i don't think it's just me noticing it. from different situations to same undertone.
+
+burnout doesn't always look dramatic. sometimes it's quiet. you're not crying or falling apart. you're just empty. you sit down to work and nothing comes. you know exactly what you should be doing and you just... don't do it.
+
+and it's confusing because from the outside, nothing looks wrong. you're still shipping. still showing up. still replying to messages. but somewhere along the way you stopped feeling like the person doing all of it.
+
+that's not laziness. it's not you being ungrateful for what you built. it's just burnout, and it's a different thing entirely.
+
+here's what's actually helped me and is still helping me.
+
+i stopped waiting to "feel ready." if i waited for motivation to come back on its own, i'd still be waiting. i started doing small things anyway, even without wanting to. not everything. just one small thing.
+
+i lowered the bar. instead of thinking about everything i "should" be doing, i just asked myself, "can i do one thing today." some days that's all i had, and i let that be enough.
+
+i said the truth instead of disappearing quietly. i stopped pretending everything was fine. it felt embarrassing at first, but it also made me feel human again instead of just a machine that's supposed to keep producing.
+
+i separated rest from quitting. those aren't the same thing. rest is part of the process, not the opposite of it. stepping back for a bit doesn't mean giving up.
+
+i stopped comparing my quiet season to everyone else's loud one. everyone's timeline looks different. someone else's streak has nothing to do with whether what i'm building is real.
+
+if you're in that season right now, where you know what to do but can't make yourself do it, i won't tell you to just push through. sometimes pushing through is exactly what got you here in the first place.
+
+what i'll say instead is start small. smaller than you think you need to. one post. one reply. one tiny thing that reminds you you're still here.
+
+motivation isn't something you wait for. it shows up after you move, not before. so just move a little. that's enough for today.
+
+las las, everybody go dey alright 🌸
+    `.trim(),
+  },
+  {
+    slug: "web3-isnt-global-yet-pollinet",
+    title: "web3 isn't global yet",
+    subtitle:
+      "Pollinet is building the infrastructure blockchain forgot: connectivity.",
+    date: "2025-05-30",
+    tag: "web3",
+    readTime: "8 min",
+    content: `
 We've spent years talking about decentralization, financial freedom, banking the unbanked and building for everyone.
 
 But here's the truth nobody says out loud:
@@ -80,16 +166,16 @@ Not the future where everyone has perfect internet.
 The future where technology works even when the network doesn't.
 
 That's the version of Web3 worth building.
-  `.trim(),
-},
+    `.trim(),
+  },
   {
-  slug: "the-wallet-that-killed-the-seed-phrase",
-  title: "the wallet that killed the seed phrase",
-  subtitle: "Why Seedless might be the onboarding breakthrough crypto needs.",
-  date: "2025-06-02",
-  tag: "wallets",
-  readTime: "6 min",
-  content: `
+    slug: "the-wallet-that-killed-the-seed-phrase",
+    title: "the wallet that killed the seed phrase",
+    subtitle: "Why Seedless might be the onboarding breakthrough crypto needs.",
+    date: "2025-06-02",
+    tag: "wallets",
+    readTime: "6 min",
+    content: `
 Let me paint a picture.
 
 You're new to crypto.
@@ -187,16 +273,17 @@ It isn't asking users to learn crypto.
 It's asking crypto to become easier for users.
 
 That's a much smarter approach.
-  `.trim(),
-},
-{
-  slug: "how-to-make-your-first-dollar-online",
-  title: "how to make your first dollar online",
-  subtitle: "The skills you already have are probably worth dollars somewhere.",
-  date: "2025-04-02",
-  tag: "career",
-  readTime: "7 min",
-  content: `
+    `.trim(),
+  },
+  {
+    slug: "how-to-make-your-first-dollar-online",
+    title: "how to make your first dollar online",
+    subtitle:
+      "The skills you already have are probably worth dollars somewhere.",
+    date: "2025-04-02",
+    tag: "career",
+    readTime: "7 min",
+    content: `
 I remember checking my account balance one day and realizing I couldn't comfortably afford something I wanted to buy.
 
 That moment changed how I thought about money.
@@ -297,9 +384,11 @@ And when the opportunity comes, you'll be ready.
 Your first dollar online is usually the hardest one.
 
 Everything after that gets easier.
-  `.trim(),
-},
+    `.trim(),
+  },
+ 
 ];
+
 export function getPost(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug);
 }
